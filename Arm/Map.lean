@@ -133,15 +133,9 @@ def Map.size (m : Map α β) : Nat :=
   next head tail ih =>
   split
   next => have := Map.size_erase_le tail a;
-          -- (FIXME) This could be discharged by omega in
-          -- leanprover/lean4:nightly-2024-02-24, but not in
-          -- leanprover/lean4:nightly-2024-03-01.
-          exact Nat.lt_succ_of_le this
+          exact Nat.lt_add_one_of_le this
   next he => simp [he] at h; simp [h] at ih; simp;
-          -- (FIXME) This could be discharged by omega in
-          -- leanprover/lean4:nightly-2024-02-24, but not in
-          -- leanprover/lean4:nightly-2024-03-01.
-             exact Nat.succ_lt_succ ih
+             exact ih
 
 -------------------------------------------------------------------------------
 

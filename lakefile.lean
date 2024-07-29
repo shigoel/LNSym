@@ -28,4 +28,5 @@ lean_exe «lnsym» where
   -- supportInterpreter := true
 
 require LeanSAT from git "https://github.com/leanprover/leansat" @ "main"
-require ELFSage from git "https://github.com/draperlaboratory/ELFSage.git" @ "main"
+-- require ELFSage from git "https://github.com/draperlaboratory/ELFSage.git" @ "main"
+require ELFSage from git "https://github.com/shigoel/ELFSage.git" @ "main"
